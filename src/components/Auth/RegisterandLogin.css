@@ -2,7 +2,7 @@
     padding-top: 5px;
     height: 30px;
     width: 40%;
-    border: 1px solid grey;
+    border: 1px solid #333;
     cursor: pointer;
     text-align: center;
     transition: all 0.3s ease-in;
@@ -20,7 +20,7 @@
 }
 
 .activeColor:hover ,.pointer:hover{
-    background: blue;
+    background: #333;
     color: white;
 }
 section{
@@ -29,7 +29,8 @@ section{
     align-items: center;
     justify-content: center;
      height: 100vh; 
-     background-color: blue;
+     background-color: #333;
+
 }
 
 .login_wrapper{
@@ -41,6 +42,7 @@ section{
     border: 1px solid black;
     width: 20rem;
     background-color: white;
+    border-radius: 35% 0 35% 0 ;
 }
 .Sigin_out{
     display: flex;
@@ -67,6 +69,14 @@ input ,.log_btn{
     height: 2rem;
 }
 .log_btn{
-    background-color: blue;
- color: white;
+ background-color: #7d7d7d;
+ color: rgb(255, 255, 255);
+ border: #333 1px solid;
+ transition: all 0.3s ease-in;
+
+}
+
+.log_btn:hover{
+    background-color: #000000;
+    
 }

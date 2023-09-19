@@ -1,14 +1,13 @@
+/* eslint-disable react/prop-types */
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../firebase";
 import "./Posts.css";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import Loader from "../Loader/Loader";
 
-
-const Posts = () => {
+// eslint-disable-next-line react/prop-types
+const SearchResult = ({searchResults}) => {
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const postImages = (post) => {
     const post_images = post.images?.map((file) => (
@@ -18,14 +17,6 @@ const Posts = () => {
     ));
     return post_images;
   };
-  useEffect(() => {
-    // Simulate loading delay (you can remove this in production)
-    const timeout = setTimeout(() => {
-        setLoading(false);
-    }, 2000); // Simulate 2 seconds loading time
-
-    return () => clearTimeout(timeout);
-}, []);
 
   useEffect(() => {
     const collectionRef = collection(db, "posts");
@@ -55,15 +46,11 @@ const Posts = () => {
   };
 
   return (
-    <div>
-        {loading ? (
-            <Loader /> // Display loader component while loading
-        ) : (
-            <DragDropContext onDragEnd={onDragEnd}>
-                <Droppable  droppableId="postsList" /* Provide a unique droppableId here */>
-                    {(provided) => (
-                        <div className="postlists" ref={provided.innerRef} {...provided.droppableProps}>
-            {posts.map((post, index) => (
+    <DragDropContext onDragEnd={onDragEnd}>
+      <Droppable  droppableId="postsList" /* Provide a unique droppableId here */>
+        {(provided) => (
+          <div className="postlists" ref={provided.innerRef} {...provided.droppableProps}>
+            {searchResults.map((post, index) => (
               <Draggable key={post.id} draggableId={post.id} index={index}>
                 {(provided) => (
                   <div
@@ -79,13 +66,11 @@ const Posts = () => {
               </Draggable>
             ))}
             {provided.placeholder}
-            </div>
-                        )}
-                    </Droppable>
-                </DragDropContext>
-            )}
-        </div>
-    );
+          </div>
+        )}
+      </Droppable>
+    </DragDropContext>
+  );
 };
 
-export default Posts;
+export default SearchResult;

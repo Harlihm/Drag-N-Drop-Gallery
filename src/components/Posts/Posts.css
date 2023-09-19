@@ -1,3 +1,24 @@
 .postImg{
     width: 200px;
+    height: 140px;
+}
+
+.postlists{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cards{
+    position: relative;
+}
+
+.caption{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.786);
+    width: -webkit-fill-available;
+    text-align: center;
+    padding: 0.5rem;
 }
