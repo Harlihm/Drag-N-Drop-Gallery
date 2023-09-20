@@ -156,7 +156,7 @@ const Home = () => {
         <div className="home_wrapper">
             <div className="title">
                 <h1>Drag n Drap Gallery</h1>
-                <button onClick={handleClick}>signout</button>
+                <button className="mainSignOut" onClick={handleClick}>Sign Out</button>
             </div>
             <div className="DragPostWrappper">
                 <div>
@@ -164,25 +164,30 @@ const Home = () => {
                         <input {...getInputProps()} />
                         <p>Drop the files here ...</p>
                     </div>
-
-                    <input
+<div className="post_caption">
+    
+<input
                         className="search"
                         type="text"
-                        placeholder="Search for a caption"
+                        placeholder="Search for a Tag"
                         value={searchValue}
                         onChange={handleSearchChange}
                     />
 
+                    <div className="select">
                     <select ref={captionRef} className="tags" value={selectedTag} onChange={handleTagChange}>
                         <option value="">Select a tag</option>
                         <option value="tag 1">Tag 1</option>
                         <option value="tag 2">Tag 2</option>
                         <option value="tag 3">Tag 3</option>
                     </select>
-                    <button onClick={uploadPost}>post</button>
+                    <button className="uploadImg" onClick={uploadPost}>Upload Photo</button>
+</div>
+                    </div>
                     {selected_images}
                 </div>
                 <SearchResult searchResults={searchResults} />
+                <span className="line"></span>
                 <Posts />
             </div>
         </div>

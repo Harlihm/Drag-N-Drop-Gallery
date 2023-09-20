@@ -43,6 +43,8 @@ section{
     width: 20rem;
     background-color: white;
     border-radius: 35% 0 35% 0 ;
+    color: #f1356d;
+
 }
 .Sigin_out{
     display: flex;
@@ -57,6 +59,7 @@ section{
     /* align-items: center; */
     justify-content: space-between;
     gap: 1rem;
+
 }
 
 h1{
@@ -66,6 +69,7 @@ h1{
 
 input ,.log_btn{
     width: 15rem;
+    color: #f1356d;
     height: 2rem;
 }
 .log_btn{

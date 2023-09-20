@@ -20,3 +20,27 @@ margin: 2rem;
     gap: 3rem;
 }
 
+.mainSignOut{
+    background: none;
+    border: 1px solid #f1356d;
+    padding: 1rem;
+    color: #f1356d;
+    transition: all 0.3s ease;
+}
+
+.mainSignOut:hover{
+    color: white;
+    background-color: #f1356d;
+}
+.post_caption{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+}
+.tags ,.uploadImg{
+    height: 2rem;
+}
