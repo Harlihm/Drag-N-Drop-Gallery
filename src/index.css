@@ -10,3 +10,52 @@ html{
   color: #f1356d;
   
 }
+
+.line{
+  width: 100vw;
+  height: 1px;
+  background-color: #f1356d;
+
+}
+
+@media screen and  (min-width:1450px) {
+ 
+
+}
+@media screen and  (max-width:1199px) {
+
+
+}
+  
+  @media screen and  (max-width:991px) {
+   
+  }
+  
+  @media screen and  (max-width:767px) {
+   
+  }
+  
+  
+  
+  
+  @media screen and (max-width:530px) {
+    
+    .postImg {
+      width: 306px;
+      height: 215px;
+  }
+
+  .select {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+  
+}
+
+  @media (max-width:828px) and (min-width:414px) {
+
+
+
+}

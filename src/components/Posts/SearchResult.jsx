@@ -59,6 +59,7 @@ const SearchResult = ({searchResults}) => {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                   >
+                    <h1 className="s">Search Result</h1>
                     <div className="caption">{post.caption}</div>
                     <div>{postImages(post)}</div>
                   </div>

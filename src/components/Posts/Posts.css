@@ -1,6 +1,6 @@
-.postImg{
-    width: 200px;
-    height: 140px;
+.postImg {
+    width: 306px;
+    height: 243px;
 }
 
 .postlists{
@@ -15,6 +15,9 @@
     position: relative;
 }
 
+.s{
+    text-align: center;
+}
 .caption{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.786);
